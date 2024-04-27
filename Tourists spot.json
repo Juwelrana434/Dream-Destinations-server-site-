@@ -1,0 +1,99 @@
+[
+{
+    "id":1,
+    "image_url": "https://w0.peakpx.com/wallpaper/293/391/HD-wallpaper-phi-phi-island-beach-tree-boat-palm.jpg",
+    "tourists_spot_name": "Phi Phi Islands",
+    "country_name": "Thailand",
+    "location": "Krabi Province",
+    "short_description": "A stunning archipelago of islands known for its crystal-clear waters, white sandy beaches, and vibrant marine life.",
+    "average_cost": "$800",
+    "seasonality": ["winter", "spring"],
+    "travel_time": "5 days",
+    "total_visitors_per_year": 500000
+  },
+  {
+  "id":2,
+    "image_url": "https://c4.wallpaperflare.com/wallpaper/272/545/213/nature-landscape-mountains-sea-clouds-hd-wallpaper-preview.jpg",
+    "tourists_spot_name": "Ubud",
+    "country_name": "Indonesia",
+    "location": "Bali",
+    "short_description": "A cultural and artistic hub surrounded by lush rice paddies and temples, offering yoga retreats and traditional Balinese crafts.",
+    "average_cost": "$600",
+    "seasonality": ["summer", "fall"],
+    "travel_time": "7 days",
+    "total_visitors_per_year": 300000
+  },
+  {
+  "id":3,
+    "image_url": "https://images.unsplash.com/photo-1606231140504-b6ec6cbbbf6b?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YW5na29yJTIwd2F0fGVufDB8fDB8fHww",
+    "tourists_spot_name": "Ha Long Bay",
+    "country_name": "Vietnam",
+    "location": "Quang Ninh Province",
+    "short_description": "A UNESCO World Heritage Site with emerald waters and thousands of limestone karsts and isles.",
+    "average_cost": "$700",
+    "seasonality": ["spring", "autumn"],
+    "travel_time": "6 days",
+    "total_visitors_per_year": 800000
+  },
+  {
+    "id":4,
+    "image_url": "https://images.unsplash.com/photo-1606231140504-b6ec6cbbbf6b?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YW5na29yJTIwd2F0fGVufDB8fDB8fHww",
+    "tourists_spot_name": "Angkor Wat",
+    "country_name": "Cambodia",
+    "location": "Siem Reap",
+    "short_description": "A magnificent ancient temple complex, the largest religious monument in the world, showcasing Khmer architecture.",
+    "average_cost": "$500",
+    "seasonality": ["winter", "spring"],
+    "travel_time": "4 days",
+    "total_visitors_per_year": 2000000
+  },
+  
+  
+  {"id":5,
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSl6saoeDBLgL-4J55g5WigIXGhjhXOotaq54cI8RTJHw&s",
+    "tourists_spot_name": "Langkawi",
+    "country_name": "Malaysia",
+    "location": "Kedah",
+    "short_description": "An archipelago of 99 islands with beautiful beaches, lush forests, and a cable car offering panoramic views.",
+    "average_cost": "$800",
+    "seasonality": ["summer", "winter"],
+    "travel_time": "5 days",
+    "total_visitors_per_year": 700000
+  },
+  
+  {"id":6,
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvFm2h8JvZtpKiLpBNew4Z3HYkDTLfJX4EkBPKz4JNBQ&s",
+    "tourists_spot_name": "Cox's Bazar",
+    "country_name": "Bangladesh",
+    "location": "Chittagong Division",
+    "short_description": "Home to the world's longest natural sandy sea beach, stretching over 120 kilometers along the Bay of Bengal.",
+    "average_cost": "$400",
+    "seasonality": ["winter", "spring"],
+    "travel_time": "3 days",
+    "total_visitors_per_year": 2000000
+  },
+  {"id":7,
+    "image_url": "https://www.shutterstock.com/image-photo/st-martins-island-locally-known-600nw-1741698692.jpg",
+    "tourists_spot_name": "Saint Martin's Island",
+    "country_name": "Bangladesh",
+    "location": "Bay of Bengal",
+    "short_description": "A tranquil tropical paradise known for its pristine beaches, coral reefs, and clear turquoise waters.",
+    "average_cost": "$500",
+    "seasonality": ["winter", "fall"],
+    "travel_time": "2 days",
+    "total_visitors_per_year": 100000
+  },
+  {"id":8,
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFJaKVyoCSUZJds6PNmtYL-B9rxQ4fu91tw4s34L63uw&s",
+    "tourists_spot_name": "Taman Negara National Park",
+    "country_name": "Malaysia",
+    "location": "Pahang",
+    "short_description": "One of the oldest rainforests in the world, featuring diverse wildlife, jungle treks, canopy walks, and the stunning Tahan River.",
+    "average_cost": "$600",
+    "seasonality": ["summer", "winter"],
+    "travel_time": "4 days",
+    "total_visitors_per_year": 300000
+  }
+  
+  ]
+  
