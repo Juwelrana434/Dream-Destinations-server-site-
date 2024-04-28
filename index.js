@@ -1,6 +1,6 @@
 const express = require('express');
 const tourspots = require('./Tourists spot.json');
-const { MongoClient, ServerApiVersion } = require('mongodb');
+const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 const cors = require('cors');
 require('dotenv').config();
 const app = express();
@@ -10,7 +10,7 @@ const port = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
-
+// connect to mongodb server and create uer password
 const uri = `mongodb+srv://${process.env.BD_USER}:${process.env.BD_PASS}@cluster0.ev00748.mongodb.net/?retryWrites=true&w=majority`;
 console.log(uri);
 
@@ -26,7 +26,42 @@ const client = new MongoClient(uri, {
 async function run() {
   try {
     // Connect the client to the server	(optional starting in v4.7)
-    await client.connect();
+    // await client.connect();
+    
+    const touristCollection = client.db('TouristBD').collection('Tourist');
+    
+    // data read 
+    app.get('/Tourist', async (req, res) => {
+      const cursor = touristCollection.find();
+      const result = await cursor.toArray();
+      res.send(result);
+      })
+    // for my list data read 
+    app.get('/Tourist/email/:email', async (req, res) => {
+    // console.log(req.params.email);
+      const cursor = touristCollection.find({email:req.params.email});
+      const result = await cursor.toArray();
+      res.send(result);
+      })
+    // for view details data read 
+    app.get('/Tourist/:id', async (req, res) => {
+    // console.log(req.params.id);
+      const cursor = touristCollection.findOne({_id : new ObjectId(req.params.id)});
+      const result = await cursor;
+      res.send(result);
+      })
+    
+    
+    // data create 
+    app.post('/Tourist', async(req, res ) => {
+      const newTouristSpot = req.body;
+      console.log(newTouristSpot);
+      const result = await touristCollection.insertOne(newTouristSpot);
+      res.send(result);
+      })
+    
+    
+    
     // Send a ping to confirm a successful connection
     await client.db("admin").command({ ping: 1 });
     console.log("Pinged your deployment. You successfully connected to MongoDB!");
