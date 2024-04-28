@@ -61,7 +61,48 @@ async function run() {
       })
     
     
+    // data update 
     
+    app.get('/Tourist/update/:id', async (req, res) => {
+      console.log(req.params.id);
+      const result = await touristCollection.findOne({_id: new ObjectId(req.params.id)})
+      res.send(result);
+      
+      })
+    
+    app.put('/Tourist/update/:id', async (req, res) => {
+    const id  = req.params.id;
+    // console.log(id);
+    const filter = {_id: new ObjectId(id)}
+    const options = {upsert: true}
+    const upDateTouristSpot = req.body;
+    
+    const tourUpdate = {
+    $set: {
+      photo: upDateTouristSpot.photo,
+      spot_name: upDateTouristSpot.spot_name,
+      country_name: upDateTouristSpot.country_name,
+      location: upDateTouristSpot.location,
+      short_description: upDateTouristSpot.short_description,
+      average_cost: upDateTouristSpot.average_cost,
+      seasonality: upDateTouristSpot.seasonality,
+      travel_time: upDateTouristSpot.travel_time,
+      total_visitor: upDateTouristSpot.total_visitor
+    }}
+    const result = await touristCollection.updateOne(filter, tourUpdate, options);
+    res.send(result);
+    
+    })
+    
+    // data delete
+    
+    app.delete('/Tourist/delete/:id', async(req, res) => {
+      const id = req.params.id;
+      const query = {_id: new ObjectId(id)}
+      const result = await touristCollection.deleteOne(query);
+      res.send(result);
+      
+      })
     // Send a ping to confirm a successful connection
     await client.db("admin").command({ ping: 1 });
     console.log("Pinged your deployment. You successfully connected to MongoDB!");
