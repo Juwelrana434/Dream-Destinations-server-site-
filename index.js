@@ -50,6 +50,15 @@ async function run() {
       const result = await cursor;
       res.send(result);
       })
+      
+      
+    // for view country data read 
+    app.get('/Tourist/country/:country', async (req, res) => {
+    console.log(req.params.country);
+      const cursor = touristCollection.find({country_name : (req.params.country)});
+      const result = await cursor.toArray();
+      res.send(result);
+      })
     
     
     // data create 
