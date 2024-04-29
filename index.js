@@ -61,6 +61,7 @@ async function run() {
       })
     
     
+    
     // data update 
     
     app.get('/Tourist/update/:id', async (req, res) => {
@@ -70,8 +71,10 @@ async function run() {
       
       })
     
+    
     app.put('/Tourist/update/:id', async (req, res) => {
     const id  = req.params.id;
+    
     // console.log(id);
     const filter = {_id: new ObjectId(id)}
     const options = {upsert: true}
@@ -94,7 +97,8 @@ async function run() {
     
     })
     
-    // data delete
+    
+    // data delete method
     
     app.delete('/Tourist/delete/:id', async(req, res) => {
       const id = req.params.id;
@@ -103,6 +107,7 @@ async function run() {
       res.send(result);
       
       })
+      
     // Send a ping to confirm a successful connection
     await client.db("admin").command({ ping: 1 });
     console.log("Pinged your deployment. You successfully connected to MongoDB!");
@@ -126,7 +131,7 @@ res.send(tourspot);
 })
 // Tourists spot section data upload to mongodb server end
 
-// for server run  
+// for server run  mongodb server
 app.get('/', (req, res) =>{
 res.send('Dream Destination Server is running')
 })
