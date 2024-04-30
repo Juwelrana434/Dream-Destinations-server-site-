@@ -73,7 +73,7 @@ async function run() {
     
     // data update 
     
-    app.get('/Tourist/update/:id', async (req, res) => {
+    app.get('/Tourist/:id', async (req, res) => {
       console.log(req.params.id);
       const result = await touristCollection.findOne({_id: new ObjectId(req.params.id)})
       res.send(result);
@@ -81,10 +81,9 @@ async function run() {
       })
     
     
-    app.put('/Tourist/update/:id', async (req, res) => {
+    app.put('/Tourist/:id', async (req, res) => {
     const id  = req.params.id;
-    
-    // console.log(id);
+    console.log(id);
     const filter = {_id: new ObjectId(id)}
     const options = {upsert: true}
     const upDateTouristSpot = req.body;
